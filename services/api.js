@@ -1,4 +1,4 @@
-const api_url_base = process.env.PORT ? 'https://candidates-api-gzkw.onrender.com' : 'http://localhost:4000'
+const api_url_base = 'https://candidates-api-gzkw.onrender.com'
 
 export async function getCandidates() {
 
