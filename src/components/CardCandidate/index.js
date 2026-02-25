@@ -1,0 +1,111 @@
+import style from './style.css'
+
+export default function Card() {
+
+    return (
+        <>
+            <section id="cards-content">
+
+                <div className="card-item">
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="top">
+                                <h4>Nome do Candidato</h4>
+                            </div>
+                            <div className="bottom">
+                                
+                                <div className="chip">
+                                    <i className="bx bx-phone"></i>
+                                    <span>923100100</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bxl-gmail"></i>
+                                    <span>exemplo@email.com</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bx-calendar"></i>
+                                    <span>data</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="card-action">
+                            <p>Área de Candidatura</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className="card-item">
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="top">
+                                <h4>Nome do Candidato</h4>
+                            </div>
+                            <div className="bottom">
+                                
+                                <div className="chip">
+                                    <i className="bx bx-phone"></i>
+                                    <span>923100100</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bxl-gmail"></i>
+                                    <span>exemplo@email.com</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bx-calendar"></i>
+                                    <span>data</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="card-action">
+                            <p>Área de Candidatura</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className="card-item">
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="top">
+                                <h4>Nome do Candidato</h4>
+                            </div>
+                            <div className="bottom">
+                                
+                                <div className="chip">
+                                    <i className="bx bx-phone"></i>
+                                    <span>923100100</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bxl-gmail"></i>
+                                    <span>exemplo@email.com</span>
+                                </div>
+
+                                <div className="chip">
+                                    <i className="bx bx-calendar"></i>
+                                    <span>data</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="card-action">
+                            <p>Área de Candidatura</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </section>
+        </>
+    )
+}
