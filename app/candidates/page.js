@@ -1,12 +1,26 @@
+'use client'
+
+import { useState } from 'react'
+
 import style from './page.module.css'
 
-import Card from '../../src/components/CardCandidate'
+import CardCandidates from '../../src/components/CardCandidate'
+import ModalAddCandidate from '../../src/components/ModalAddCandidate'
 
 export default function Candidates() {
 
+    const [modalVisibilty, setModalVisibilty] = useState('hide')
+
     return (
         <>
-            <Card/>
+            <CardCandidates
+                setModalVisibilty={setModalVisibilty}
+            />
+
+            <ModalAddCandidate
+                modalVisibilty={modalVisibilty}
+                setModalVisibilty={setModalVisibilty}
+            />
         </>
     )
 }

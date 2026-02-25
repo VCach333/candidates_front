@@ -1,21 +1,65 @@
-section#cards-content {
-    width: 100%;
+.card-header {
+    padding: 0 20%;
+    margin-top: 120px;
+}
+
+.card-header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.card-header div h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.card-header div button {
+    padding: 10px 20px;
+    border: none;
+
+    background-color: #333333;
+    color: #f8f8f8;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card-header hr {
+    border: none;
+    height: 2px;
+    background-color: #e2e2e2f1;
+}
+
+section#cardsContent {
+    /*width: 100%;
     height: 95dvh;
-    padding: 120px 20%;
+    padding: 0 20%;
+    margin-top: 30px;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;*/
+
+    padding: 0 20%;
+    margin-top: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-section#cards-content .card-item {
+section#cardsContent .card-item {
     width: 300px;
     height: 400px;
 }
 
-section#cards-content .card-item .card {
+section#cardsContent .card-item .card {
     width: 100%;
     height: 100%;
 
@@ -27,36 +71,36 @@ section#cards-content .card-item .card {
     box-shadow: 0 8px 16px #0000001a;
 }
 
-section#cards-content .card-item .card > div {
+section#cardsContent .card-item .card > div {
     padding: 24px;
 }
 
-section#cards-content .card-item .card > .card-content {
+section#cardsContent .card-item .card > .card-content {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     overflow-y: scroll;
 }
 
-section#cards-content .card-item .card > .card-content .top {
+section#cardsContent .card-item .card > .card-content .top {
     border-bottom: 1px solid #e2e2e27a;
     padding-bottom: 1em;
     text-align: center;
 }
 
-section#cards-content .card-item .card > .card-content .top h4 {
+section#cardsContent .card-item .card > .card-content .top h4 {
     font-size: 18px;
     font-weight: 600;
     color: #333333c0;
 }
 
-section#cards-content .card-item .card > .card-content .bottom {
+section#cardsContent .card-item .card > .card-content .bottom {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
 
-section#cards-content .card-item .card > .card-content .bottom .chip {
+section#cardsContent .card-item .card > .card-content .bottom .chip {
     display: flex;
     align-items: center;
     gap: .5em;
@@ -66,12 +110,12 @@ section#cards-content .card-item .card > .card-content .bottom .chip {
     padding: .8em;
 }
 
-section#cards-content .card-item .card > .card-action {
+section#cardsContent .card-item .card > .card-action {
     border-top: 1px solid #e2e2e27a;
     text-align: center;
 }
 
-section#cards-content .card-item .card > .card-action p {
+section#cardsContent .card-item .card > .card-action p {
     font-size: 18px;
     font-weight: 400;
     color: #333333c0;

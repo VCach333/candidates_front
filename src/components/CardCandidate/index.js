@@ -1,19 +1,27 @@
 import style from './style.css'
 
-export default function Card() {
+export default function CardCandidates({ setModalVisibilty }) {
 
     return (
         <>
-            <section id="cards-content">
+            <div className="card-header">
+                <div>
+                    <h1>Lista de Candidatos</h1>
+                    <button onClick={() => setModalVisibilty('show')}>Novo</button>
+                </div>
+                <hr />
+            </div>
+
+            <section id="cardsContent">
 
                 <div className="card-item">
                     <div className="card">
                         <div className="card-content">
                             <div className="top">
-                                <h4>Nome do Candidato</h4>
+                                <h4>Nome do Candidato 1</h4>
                             </div>
                             <div className="bottom">
-                                
+
                                 <div className="chip">
                                     <i className="bx bx-phone"></i>
                                     <span>923100100</span>
@@ -43,10 +51,10 @@ export default function Card() {
                     <div className="card">
                         <div className="card-content">
                             <div className="top">
-                                <h4>Nome do Candidato</h4>
+                                <h4>Nome do Candidato 2</h4>
                             </div>
                             <div className="bottom">
-                                
+
                                 <div className="chip">
                                     <i className="bx bx-phone"></i>
                                     <span>923100100</span>
@@ -76,10 +84,10 @@ export default function Card() {
                     <div className="card">
                         <div className="card-content">
                             <div className="top">
-                                <h4>Nome do Candidato</h4>
+                                <h4>Nome do Candidato 3</h4>
                             </div>
                             <div className="bottom">
-                                
+
                                 <div className="chip">
                                     <i className="bx bx-phone"></i>
                                     <span>923100100</span>
@@ -104,7 +112,7 @@ export default function Card() {
 
                     </div>
                 </div>
-                
+
             </section>
         </>
     )
