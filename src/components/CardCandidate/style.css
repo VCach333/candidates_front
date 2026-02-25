@@ -31,35 +31,12 @@
     background-color: #e2e2e2f1;
 }
 
-section#cardsContent {
-    /*width: 100%;
-    height: 95dvh;
-    padding: 0 20%;
-    margin-top: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;*/
-
-    padding: 0 20%;
-    margin-top: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-section#cardsContent .card-item {
+.card-item {
     width: 300px;
     height: 400px;
 }
 
-section#cardsContent .card-item .card {
+.card-item .card {
     width: 100%;
     height: 100%;
 
@@ -71,36 +48,36 @@ section#cardsContent .card-item .card {
     box-shadow: 0 8px 16px #0000001a;
 }
 
-section#cardsContent .card-item .card > div {
+.card-item .card > div {
     padding: 24px;
 }
 
-section#cardsContent .card-item .card > .card-content {
+.card-item .card > .card-content {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     overflow-y: scroll;
 }
 
-section#cardsContent .card-item .card > .card-content .top {
+.card-item .card > .card-content .top {
     border-bottom: 1px solid #e2e2e27a;
     padding-bottom: 1em;
     text-align: center;
 }
 
-section#cardsContent .card-item .card > .card-content .top h4 {
+.card-item .card > .card-content .top h4 {
     font-size: 18px;
     font-weight: 600;
     color: #333333c0;
 }
 
-section#cardsContent .card-item .card > .card-content .bottom {
+.card-item .card > .card-content .bottom {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
 
-section#cardsContent .card-item .card > .card-content .bottom .chip {
+.card-item .card > .card-content .bottom .chip {
     display: flex;
     align-items: center;
     gap: .5em;
@@ -110,12 +87,12 @@ section#cardsContent .card-item .card > .card-content .bottom .chip {
     padding: .8em;
 }
 
-section#cardsContent .card-item .card > .card-action {
+.card-item .card > .card-action {
     border-top: 1px solid #e2e2e27a;
     text-align: center;
 }
 
-section#cardsContent .card-item .card > .card-action p {
+.card-item .card > .card-action p {
     font-size: 18px;
     font-weight: 400;
     color: #333333c0;

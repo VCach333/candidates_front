@@ -50,7 +50,7 @@ export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty })
                     <footer>
 
                         <div className="item">
-                            <button>Cancelar</button>
+                            <button onClick={() => setModalVisibilty('hide')}>Cancelar</button>
                         </div>
 
                         <div className="item">
