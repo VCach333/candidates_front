@@ -1,3 +1,19 @@
+## Executar Localmente
+
+	** no terminal, na pasta do projeto, execute o comando npm install **
+	** excute o comando npx next dev **
+	** abra o navegador na url localhost:3000 ou conforme indicar o terminal **
+
+## Sem Internet?
+	a API é chamada na web, necessita de internet, porém pode alterar a 1º linha do arquivo services/api.js mundando de 
+
+		const api_url_base = 'https://candidates-api-gzkw.onrender.com'
+	para
+		const api_url_base = 'localhost:4000'
+
+	enviei a pasta de icones do boxicon para a pasta public
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
