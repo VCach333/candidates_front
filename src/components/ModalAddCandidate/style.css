@@ -26,10 +26,105 @@ section#modalsContent {
 
     min-width: 300px;
     width: 40%;
-    height: 300px;
+    min-height: 350px;
+    height: auto;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     background-color: #f8f8f8;
     box-shadow: 0 8px 16px #0000001a;
 }
 
 #modalAddCandidate.modal.hide { display: none; }
 #modalAddCandidate.modal.show { display: flex; }
+
+#modalAddCandidate.modal :is(header, main, footer) {
+    padding: 15px 30px;
+}
+
+#modalAddCandidate.modal > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e27a;
+}
+
+#modalAddCandidate.modal > header .item h4 {
+    font-size: 24px;
+    color: #00bfff;
+}
+
+#modalAddCandidate.modal > header .item button {
+    width: 32px;
+    height: 32px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ff17441a;
+    color: #ff1744;
+}
+
+#modalAddCandidate.modal > main {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+#modalAddCandidate.modal > main form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#modalAddCandidate.modal > main form .input-field {
+    width: calc(50% - 30px);
+}
+
+#modalAddCandidate.modal > main form .input-field :is(input, select) {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background-color: #7777773a;
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+#modalAddCandidate.modal > footer {
+    border-top: 1px solid #e2e2e27a;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modalAddCandidate.modal > footer button {
+    padding: 7.5px 15px;
+    border: none;
+    background-color: #7777773a;
+    color: #777777;
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+#modalAddCandidate.modal > footer div:last-child button {
+    background-color: #00bfff;
+    color: #fff;
+}

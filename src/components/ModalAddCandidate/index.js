@@ -10,16 +10,54 @@ export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty })
 
                 <div id="modalAddCandidate" className={`modal ${modalVisibilty}`}>
 
-                    <div className="modal-header">
-                        <div className="modal-header-item">
+                    <header>
+                        <div className="item">
                             <h4>Cadastrar Candidato</h4>
                         </div>
-                        <div className="modal-header-item">
+                        <div className="item">
                             <button onClick={() => setModalVisibilty('hide')}>
-                                <i className="bx bx-x"></i>
+                                <i className="bx bx-x bx-sm"></i>
                             </button>
                         </div>
-                    </div>
+                    </header>
+
+                    <main>
+                        <form>
+                            <div className="input-field">
+                                <input type="text" name="name" id="name" placeholder="nome" />
+                            </div>
+
+                            <div className="input-field">
+                                <input type="tel" name="tel" id="tel" placeholder="telefone" />
+                            </div>
+
+                            <div className="input-field">
+                                <input type="email" name="email" id="email" placeholder="email" />
+                            </div>
+
+                            <div className="input-field">
+                                <select name="position" id="position">
+                                    <option disabled>Área</option>
+                                    <option>Administração</option>
+                                    <option>Recursos Humanos</option>
+                                    <option>Serviços Gerais</option>
+                                    <option>Tecnologia de Informação</option>
+                                </select>
+                            </div>
+                        </form>
+                    </main>
+
+                    <footer>
+
+                        <div className="item">
+                            <button>Cancelar</button>
+                        </div>
+
+                        <div className="item">
+                            <button>Cadastrar</button>
+                        </div>
+
+                    </footer>
 
                 </div>
 
