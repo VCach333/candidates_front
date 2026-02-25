@@ -1,6 +1,34 @@
+'use client'
+
+import { useState } from 'react'
+
+import { createCandidate } from '@/services/api'
+
 import style from './style.css'
 
-export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty }) {
+export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty, onSuccess }) {
+
+    const [name, setName] = useState('')
+    const [tel, setTel] = useState('')
+    const [email, setEmail] = useState('')
+    const [position, setPosition] = useState('')
+
+    if(!modalVisibilty) return null
+
+    async function handleSubmit(elem) {
+
+        elem.preventDefault()
+
+        console.log('from Modal Component', {name, tel, email, position})
+
+        await createCandidate({name, tel, email, position})
+
+        onSuccess()
+        setName('')
+        setTel('')
+        setEmail('')
+        setPosition('')
+    }
 
     return (
         <>
@@ -22,21 +50,47 @@ export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty })
                     </header>
 
                     <main>
-                        <form>
+                        <form id="formAddCandidate" onSubmit={handleSubmit}>
                             <div className="input-field">
-                                <input type="text" name="name" id="name" placeholder="nome" />
+                                <input
+                                    value={name}
+                                    onChange={(elem) => setName(elem.target.value)}
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="nome"
+                                />
                             </div>
 
                             <div className="input-field">
-                                <input type="tel" name="tel" id="tel" placeholder="telefone" />
+                                <input
+                                    value={tel}
+                                    onChange={(elem) => setTel(elem.target.value)}
+                                    type="tel"
+                                    name="tel"
+                                    id="tel"
+                                    placeholder="telefone"
+                                />
                             </div>
 
                             <div className="input-field">
-                                <input type="email" name="email" id="email" placeholder="email" />
+                                <input
+                                    value={email}
+                                    onChange={(elem) => setEmail(elem.target.value)}
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="email"
+                                />
                             </div>
 
                             <div className="input-field">
-                                <select name="position" id="position">
+                                <select
+                                    value={position}
+                                    onChange={(elem) => setPosition(elem.target.value)}
+                                    name="position"
+                                    id="position"
+                                >
                                     <option disabled>Área</option>
                                     <option>Administração</option>
                                     <option>Recursos Humanos</option>
@@ -54,7 +108,7 @@ export default function ModalAddCandidate({ modalVisibilty, setModalVisibilty })
                         </div>
 
                         <div className="item">
-                            <button>Cadastrar</button>
+                            <button type="submit" form="formAddCandidate">Cadastrar</button>
                         </div>
 
                     </footer>

@@ -11,3 +11,20 @@ export async function getCandidates() {
 
     } catch (err) { console.log(err) }
 }
+
+export async function createCandidate(data) {
+
+    console.log('from service/api.js', data)
+
+
+    const response = await fetch(`${api_url_base}/candidates`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+
+    return response.json()
+
+}

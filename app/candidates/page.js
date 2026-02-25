@@ -11,7 +11,7 @@ import CardHeader from '../../src/components/CardCandidate/CardHeader'
 import ModalAddCandidate from '../../src/components/ModalAddCandidate'
 
 /* import api services */
-import { getCandidates } from '@/services/api'
+import { getCandidates, createCandidate } from '@/services/api'
 
 export default function Candidates() {
 
@@ -21,7 +21,6 @@ export default function Candidates() {
     async function loadCandidates() {
 
         const data = await getCandidates()
-        console.log('getCand.: ' + data)
         setCandidates(data)
     }
 
@@ -45,6 +44,7 @@ export default function Candidates() {
             <ModalAddCandidate
                 modalVisibilty={modalVisibilty}
                 setModalVisibilty={setModalVisibilty}
+                onSuccess={() => { loadCandidates(); setModalVisibilty('hide') }}
             />
         </>
     )
