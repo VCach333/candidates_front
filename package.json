@@ -1,0 +1,25 @@
+{
+  "name": "cand-gest-front",
+  "version": "1.0.0",
+  "description": "Front-end para consumo da API de Gestão de Candidaturas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VCach333/candidates_front.git"
+  },
+  "keywords": [
+    "front",
+    "next",
+    "use-api",
+    "candidates"
+  ],
+  "author": "VCach333",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VCach333/candidates_front/issues"
+  },
+  "homepage": "https://github.com/VCach333/candidates_front#readme"
+}
